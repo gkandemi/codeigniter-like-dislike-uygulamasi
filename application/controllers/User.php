@@ -19,7 +19,28 @@ class User extends CI_Controller {
 
     public function login(){
 
-        echo "Login işlemi yaptiniz..";
+        $this->load->library("form_validation");
+
+        $this->form_validation->set_rules("username","Kullanıcı adı","required|trim");
+        $this->form_validation->set_rules("password","Şifre","required|trim");
+
+        $error_messages = array(
+            "required"  => "<strong>{field}</strong> alanını boş bırakamazsınız"
+        );
+
+        $this->form_validation->set_message($error_messages);
+
+        if($this->form_validation->run() === FALSE){
+
+            $this->session->set_flashdata("error", validation_errors());
+
+            $this->login_form();
+
+        } else {
+
+            echo "Ok";
+        }
+
     }
 
 
