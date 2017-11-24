@@ -61,8 +61,6 @@ class Post extends CI_Controller
                 )
             );
 
-            echo "update edildi";
-
         } else {
 
             $insert = $this->vote_model->add(
@@ -72,10 +70,12 @@ class Post extends CI_Controller
                     "vote_status" => $vote_status
                 )
             );
-
-            echo "eklendi";
-
         }
+
+        $renderData["posts"] = $this->post_model->post_list();
+
+        echo $this->load->view("renders/post_list_render", $renderData, true);
+
 
     }
 
