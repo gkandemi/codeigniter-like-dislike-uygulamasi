@@ -1,6 +1,7 @@
 <?php
 
-class Post extends CI_Controller {
+class Post extends CI_Controller
+{
 
     public function __construct()
     {
@@ -10,12 +11,13 @@ class Post extends CI_Controller {
 
         $user = $this->session->userdata("user");
 
-        if(!$user){
+        if (!$user) {
             redirect(base_url("giris-yap"));
         }
     }
 
-    public function index(){
+    public function index()
+    {
 
         $viewData = new stdClass();
         $viewData->user = $this->session->userdata("user");
@@ -27,25 +29,53 @@ class Post extends CI_Controller {
 
     }
 
-    public function vote(){
+    public function vote()
+    {
 
-        $post_id     = $this->input->post("post_id");
+        $post_id = $this->input->post("post_id");
         $vote_status = $this->input->post("vote_status");
 
-        $user        = $this->session->userdata("user");
-        $user_id     = $user->id;
+        $user = $this->session->userdata("user");
+        $user_id = $user->id;
 
         $this->load->model("vote_model");
 
-        $insert = $this->vote_model->add(
+
+        $vote = $this->vote_model->get(
             array(
-                "post_id"       => $post_id,
-                "user_id"       => $user_id,
-                "vote_status"   => $vote_status
+                "post_id" => $post_id,
+                "user_id" => $user_id,
             )
         );
 
-        echo $insert;
+        if ($vote) {
+
+            $update = $this->vote_model->update(
+                array(
+                    "post_id" => $post_id,
+                    "user_id" => $user_id,
+                    "vote_status" => $vote_status
+                ),
+                array(
+                    "id" => $vote->id
+                )
+            );
+
+            echo "update edildi";
+
+        } else {
+
+            $insert = $this->vote_model->add(
+                array(
+                    "post_id" => $post_id,
+                    "user_id" => $user_id,
+                    "vote_status" => $vote_status
+                )
+            );
+
+            echo "eklendi";
+
+        }
 
     }
 
