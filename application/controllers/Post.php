@@ -7,10 +7,15 @@ class Post extends CI_Controller {
         parent::__construct();
 
         $this->load->model("post_model");
+
+        $user = $this->session->userdata("user");
+
+        if(!$user){
+            redirect(base_url("giris-yap"));
+        }
     }
 
     public function index(){
-
 
         $viewData = new stdClass();
         $viewData->user = $this->session->userdata("user");
@@ -20,5 +25,6 @@ class Post extends CI_Controller {
         $this->load->view("post_list_v", $viewData);
 
     }
+
 
 }

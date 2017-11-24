@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="#">Çıkış Yap <span class="sr-only">(current)</span></a>
+                    <a href="<?php echo base_url("cikis"); ?>">Çıkış Yap <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

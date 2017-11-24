@@ -12,8 +12,17 @@ class User extends CI_Controller
         parent::__construct();
     }
 
+    public function index(){
+        $this->login_form();
+    }
+
     public function login_form()
     {
+        $user = $this->session->userdata("user");
+
+        if($user){
+            redirect(base_url("yazi-listesi"));
+        }
 
         $this->load->view("login_form_v");
 
@@ -21,6 +30,12 @@ class User extends CI_Controller
 
     public function login()
     {
+
+        $user = $this->session->userdata("user");
+
+        if($user){
+            redirect(base_url("yazi-listesi"));
+        }
 
         $this->load->library("form_validation");
 
@@ -59,6 +74,14 @@ class User extends CI_Controller
                 $this->login_form();
             }
         }
+
+    }
+
+    public function logout(){
+
+        $this->session->unset_userdata("user");
+
+        redirect(base_url());
 
     }
 
