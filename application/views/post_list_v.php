@@ -25,5 +25,91 @@
 </nav>
 
 
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 well">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deserunt dignissimos dolore, ea eligendi esse eum, eveniet expedita fugiat officia placeat praesentium quas similique tempora temporibus vel veritatis voluptates.
+            </p>
+            <div class="thumbs_container">
+                <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="like_count">(123)</span>
+                </button>
+                <button class="btn btn-danger">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    <span class="dislike_count">(0)</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12 well">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deserunt dignissimos dolore, ea eligendi esse eum, eveniet expedita fugiat officia placeat praesentium quas similique tempora temporibus vel veritatis voluptates.
+            </p>
+            <div class="thumbs_container">
+                <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="like_count">(123)</span>
+                </button>
+                <button class="btn btn-danger">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    <span class="dislike_count">(0)</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12 well">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deserunt dignissimos dolore, ea eligendi esse eum, eveniet expedita fugiat officia placeat praesentium quas similique tempora temporibus vel veritatis voluptates.
+            </p>
+            <div class="thumbs_container">
+                <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="like_count">(123)</span>
+                </button>
+                <button class="btn btn-danger">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    <span class="dislike_count">(0)</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12 well">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deserunt dignissimos dolore, ea eligendi esse eum, eveniet expedita fugiat officia placeat praesentium quas similique tempora temporibus vel veritatis voluptates.
+            </p>
+            <div class="thumbs_container">
+                <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="like_count">(123)</span>
+                </button>
+                <button class="btn btn-danger">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    <span class="dislike_count">(0)</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12 well">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur deserunt dignissimos dolore, ea eligendi esse eum, eveniet expedita fugiat officia placeat praesentium quas similique tempora temporibus vel veritatis voluptates.
+            </p>
+            <div class="thumbs_container">
+                <button class="btn btn-success">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span class="like_count">(123)</span>
+                </button>
+                <button class="btn btn-danger">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    <span class="dislike_count">(0)</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
 </body>
 </html>

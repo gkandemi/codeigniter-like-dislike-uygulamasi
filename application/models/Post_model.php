@@ -4,7 +4,7 @@
  * Created by gkandemir
  * User: gkandemir
  */
-class User_model extends CI_Model
+class Post_model extends CI_Model
 {
 
     public $table;
