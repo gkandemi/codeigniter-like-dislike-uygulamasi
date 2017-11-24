@@ -49,7 +49,9 @@ class User extends CI_Controller
 
             if ($user) {
 
-                echo "Giriş başarılıdır";
+                $this->session->set_userdata("user", $user);
+
+                redirect(base_url("yazi-listesi"));
 
             } else {
 
