@@ -72,9 +72,11 @@ class Post extends CI_Controller
             );
         }
 
-        $renderData["posts"] = $this->post_model->post_list();
+//        $renderData["posts"] = $this->post_model->post_list();
+//        echo $this->load->view("renders/post_list_render", $renderData, true);
 
-        echo $this->load->view("renders/post_list_render", $renderData, true);
+        $renderData["post"] = $this->post_model->get_post($post_id);
+        echo $this->load->view("renders/post_render", $renderData, true);
 
 
     }
