@@ -50,16 +50,28 @@ class Post extends CI_Controller
 
         if ($vote) {
 
+
+            if($vote->vote_status == $vote_status){
+
+                $new_vote_status = 0;
+
+            } else {
+
+                $new_vote_status = $vote_status;
+                
+            }
+
             $update = $this->vote_model->update(
                 array(
                     "post_id" => $post_id,
                     "user_id" => $user_id,
-                    "vote_status" => $vote_status
+                    "vote_status" => $new_vote_status
                 ),
                 array(
                     "id" => $vote->id
                 )
             );
+
 
         } else {
 
@@ -70,6 +82,7 @@ class Post extends CI_Controller
                     "vote_status" => $vote_status
                 )
             );
+
         }
 
 //        $renderData["posts"] = $this->post_model->post_list();
